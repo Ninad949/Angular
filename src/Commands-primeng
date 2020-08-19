@@ -1,0 +1,23 @@
+npm install -g @angular/cli
+
+ng-new library-management
+
+
+cd library-management
+
+ng serve
+
+npm install primeng --save
+
+npm install primeicons --save
+
+npm install fone-awesome --save
+
+npm install @angular/cdk --save
+
+Copy below lines to angular.json:-
+"./node_modules/primeicons/primeicons.css",
+"./node_modules/primeng/resources/themes/nova-light/theme.css"
+"./node_modules/primeng/resources/primeng.min.css"
+
+ng generate component helloworld
