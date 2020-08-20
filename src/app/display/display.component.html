@@ -2,28 +2,3 @@
 
 <h3>Data is as follow</h3>
 
-<table>
-    <ng-template pTemplate="header">
-        <tr>
-            <th>DatabaseId</th>
-            <th>CustomerName</th>
-            <th>Adresss</th>
-            <th>phoneNumber</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-car>
-        <tr>
-            <td>{{database.DatabaseId}}</td>
-            <td>{{database.CustomerName}}</td>
-            <td>{{database.Adresss}}</td>
-            <td>{{database.phoneNumber}}</td>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="footer" let-columns="columns">
-        <tr>
-            <td *ngFor="let col of columns">
-                {{col.header}}
-            </td>
-        </tr>
-    </ng-template>
-</table>
