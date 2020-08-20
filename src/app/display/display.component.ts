@@ -1,8 +1,3 @@
-import { Component, OnInit } from '@angular/core';
-import { DatabaseService } from '../database/databaseservice';
-
-import { IDatabase } from '../database/database';
-
 @Component({
   selector: 'app-display',
   templateUrl: './display.component.html',
@@ -11,12 +6,22 @@ import { IDatabase } from '../database/database';
 export class DisplayComponent implements OnInit {
 
   database :IDatabase [];
+  errorMessage: any;
+
+ database2 : IDatabase[];
 
 
   constructor (private dbservice: DatabaseService) { }
 
   ngOnInit() {
-    this.dbservice.getCarsSmall().then(databse => this.database = databse);
+    
+  }
+
+  getProduct(id: number) {
+    this.dbservice.getProduct(id).subscribe({
+      next: database => this.database2 ,
+      error: err => this.errorMessage = err
+    });
 }
   
 
